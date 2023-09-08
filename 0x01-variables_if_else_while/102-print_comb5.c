@@ -19,6 +19,8 @@ int main(void)
 			{
 				for (n = 0; n < 10; n++)
 				{
+					if (m == 0 && n == 0)
+						continue;
 					putchar('0' + i);
 					putchar('0' + j);
 					putchar(' ');
