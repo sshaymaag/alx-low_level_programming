@@ -37,6 +37,5 @@ int main(void)
 		iOuter++;
 	}
 	putchar('\n');
-
 	return (0);
 }
