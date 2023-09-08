@@ -6,13 +6,18 @@
 */
 int main(void)
 {
-	for (int i = 0; i < 10; i++)
+	int i;
+	int j;
+	int m;
+	int n;
+
+	for (i = 0; i < 10; i++)
 	{
-		for (int j = 0 ; j < 9; j++)
+		for (j = 0 ; j < 9; j++)
 		{
-			for (int m = 0; m < 10; m++)
+			for (m = 0; m < 10; m++)
 			{
-				for (int n = 1; n < 10; n++)
+				for (n = 1; n < 10; n++)
 				{
 					putchar('0' + i);
 					putchar('0' + j);
