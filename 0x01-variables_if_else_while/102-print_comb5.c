@@ -1,40 +1,42 @@
 #include <stdio.h>
+
 /**
-* main - combination
-* Return: 0
-*
-*/
+ * main - Entry Point
+ *
+ * Description: make combinations of 2 numbers (that range from 0 to 99)
+ *
+ * Return: 0 if successful
+ */
 int main(void)
 {
-	int i;
-	int j;
-	int m;
-	int n;
+	int iOuter = 0;
+	int iInner = 0;
 
-	for (i = 0; i < 10; i++)
+	while (iOuter <= 99)
 	{
-		for (j = 0 ; j < 9; j++)
+		while (iInner <= 99)
 		{
-			for (m = 0; m < 10; m++)
+			if (iInner <= iOuter)
 			{
-				for (n = 0; n < 10; n++)
-				{
-					if (m == 0 && n == 0)
-						continue;
-					putchar('0' + i);
-					putchar('0' + j);
-					putchar(' ');
-					putchar('0' + m);
-					putchar('0' + n);
-					if (m == 9 && n == 9)
-					{
-						break;
-					}
-					putchar(',');
-					putchar(' ');
-				}
+				iInner++;
+				continue;
 			}
+			putchar((iOuter / 10) + 48);
+			putchar((iOuter % 10) + 48);
+			putchar(' ');
+			putchar((iInner / 10) + 48);
+			putchar((iInner % 10) + 48);
+			if (!(iOuter == 98 && iInner == 99))
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			iInner++;
 		}
+		iInner = 0;
+		iOuter++;
 	}
+	putchar('\n');
+
 	return (0);
 }
