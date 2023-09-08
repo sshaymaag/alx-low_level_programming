@@ -21,6 +21,10 @@ int main(void)
 					putchar('0' + x);
 					putchar('0' + n);
 					putchar('0' + m);
+					if (x == 7 && n == 8 && m == 9)
+					{
+						break;
+					}
 					putchar(',');
 					putchar(' ');
 				}
