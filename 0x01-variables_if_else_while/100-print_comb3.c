@@ -13,11 +13,11 @@ int main(void)
 	{
 		while (m < 10)
 		{
-			if (m != n && m != n - 1)
+			if (m != n )
 			{
 				putchar('0' + n);
 				putchar('0' + m);
-				if (n == 9 && m == 7)
+				if (n == 8 && m == 9)
 				{
 					break;
 				}
@@ -27,7 +27,7 @@ int main(void)
 			m++;
 		}
 		n++;
-		m = 0;
+		m = n;
 	}
 	putchar('\n');
 	return (0);
