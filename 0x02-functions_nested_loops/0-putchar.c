@@ -12,11 +12,8 @@ int main(void)
 	char text[] = "_putchar";
 	int i;
 
-	i = 0;
-	while (text[i] != '\0')
-	{
+	for (i = 0; (size_t)i < strlen(text) ; i++)
 		_putchar (text[i]);
-		i++;
-	}
 	_putchar ('\n');
+
 }
