@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 void print_alphabet(void);
 
 /**
@@ -14,6 +15,9 @@ int main(void)
 	return (0);
 }
 
+/**
+ * print_alphabet - alphabets
+ */
 void print_alphabet(void)
 {
 	char letter = 'a';
