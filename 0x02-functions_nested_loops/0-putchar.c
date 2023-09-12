@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include "main.h"
+#include<stdio.h>
 /**
  * main - putchar
  *
@@ -6,7 +7,11 @@
  */
 int main(void)
 {
-	printf("_putchar");
-	putchar('\n');
-	return (0);
+	char text[] = "_putchar";
+	int i;
+
+	for (i = 0; i < sizeof(text) ; i++)
+		_putchar (text[i]);
+	_putchar ('\n');
+
 }
