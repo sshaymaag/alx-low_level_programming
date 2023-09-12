@@ -13,3 +13,12 @@ void print_alphabet(void)
 	}
 	_putchar('\n');
 }
+/**
+ * main - alphabets
+ *
+ * Return: 0
+ */
+int main(void)
+{
+	return (0);
+}
