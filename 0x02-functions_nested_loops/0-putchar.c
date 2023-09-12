@@ -1,18 +1,20 @@
-#include "main.h"
+#include <stdio.h>
 /**
- * main - putchar
+ * main - alphabets
  *
  * Return: 0
  */
 int main(void)
 {
-	_putchar ('_');
-	_putchar ('p');
-	_putchar ('u');
-	_putchar ('t');
-	_putchar ('c');
-	_putchar ('h');
-	_putchar ('a');
-	_putchar ('r');
-	_putchar ('\n');
+	char text[] = "_putchar";
+	int i;
+
+	i = 0;
+	while (text[i] != '\0')
+	{
+		putchar(text[i]);
+		i++;
+	}
+	putchar ('\n');
+	return (0);
 }
