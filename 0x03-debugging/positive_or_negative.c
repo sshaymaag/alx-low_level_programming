@@ -2,7 +2,7 @@
 /**
 * positive_or_negative - if statement
 *
-* Return: 0
+*  @n: The character to print
 */
 void positive_or_negative(int n)
 {
