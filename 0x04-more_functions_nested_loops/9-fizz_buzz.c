@@ -16,19 +16,19 @@ int main(void)
 			putchar(' ');
 
 		}
-		if (i % 5 == 0)
+		else if (i % 5 == 0)
 		{
 			printf("Buzz");
 			putchar(' ');
 
 		}
-		if (i % 3 == 0 && i % 5 == 0)
+		else if (i % 3 == 0 && i % 5 == 0)
 		{
 			printf("FizzBuzz");
 			putchar(' ');
 
 		}
-		if (i % 3 != 0 && i % 5 != 0)
+		else if (i % 3 != 0 && i % 5 != 0)
 		{
 			printf("%d", i);
 			putchar(' ');
