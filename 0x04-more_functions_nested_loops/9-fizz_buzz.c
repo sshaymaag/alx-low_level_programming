@@ -1,8 +1,9 @@
 #include <stdio.h>
+
 /**
- * main - check the code
+ * main - entry point
  *
- * Return: Always 0.
+ * Return: 0 (Always)
  */
 int main(void)
 {
@@ -10,28 +11,24 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		if (i != 1)
 		{
-			printf("FizzBuzz");
-			putchar(' ');
+			printf(" ");
 		}
-		else if (i % 3 == 0 || i % 5 == 0)
+		if ((i % 3 == 0 || i % 5 == 0) && i != 0)
 		{
 			if (i % 3 == 0)
 			{
 				printf("Fizz");
-				putchar(' ');
 			}
-			else if (i % 5 == 0)
+			if (i % 5 == 0)
 			{
 				printf("Buzz");
-				putchar(' ');
 			}
 		}
 		else
 		{
 			printf("%d", i);
-			putchar(' ');
 		}
 	}
 	printf("\n");
