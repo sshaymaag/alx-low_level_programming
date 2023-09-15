@@ -1,9 +1,8 @@
 #include <stdio.h>
-
 /**
- * main - entry point
+ * main - check the code
  *
- * Return: 0 (Always)
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -13,9 +12,9 @@ int main(void)
 	{
 		if (i != 1)
 		{
-			printf(" ");
+			putchar(' ');
 		}
-		if ((i % 3 == 0 || i % 5 == 0) && i != 0)
+		if (i % 3 == 0 || i % 5 == 0)
 		{
 			if (i % 3 == 0)
 			{
@@ -29,6 +28,7 @@ int main(void)
 		else
 		{
 			printf("%d", i);
+			putchar(' ');
 		}
 	}
 	printf("\n");
