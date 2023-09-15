@@ -20,7 +20,6 @@ void print_number(int n)
 	{
 		number = n;
 	}
-
 	c = 1;
 	total = number;
 
