@@ -7,9 +7,22 @@
  * @src: The character to print
  * @n: The character to print
  * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	return (strncat(dest, src, n));
+	int len;
+	char *s = dest;
+
+	len = strlen(dest);
+	while (len--)
+	{
+		dest++;
+	}
+	while (n--)
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	return (s);
 }
