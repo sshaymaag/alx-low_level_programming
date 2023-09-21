@@ -12,6 +12,7 @@
 char *_strcat(char *dest, char *src)
 {
 	int len;
+	char *s = dest;
 
 	len = strlen(dest);
 	while (len--)
@@ -24,5 +25,5 @@ char *_strcat(char *dest, char *src)
 		dest++;
 		src++;
 	}
-	return (dest);
+	return (s);
 }
