@@ -1,5 +1,7 @@
 #include <unistd.h>
 #include <string.h>
+#include <stdio.h>
+
 
 /**
  * _strncpy - writes the character c to stdout
@@ -10,14 +12,16 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *s = NULL;
+	int i;
 
-	s = dest;
-	while (n--)
+	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
-		*dest = *src;
-		src++;
-		dest++;
+		dest[i] = src[i];
 	}
-	return (s);
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }
