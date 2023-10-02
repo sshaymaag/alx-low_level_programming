@@ -1,4 +1,4 @@
-int _putchar(char c)
+int _atoi(char *s)
 {
-	return(0);
+	return (0);
 }
