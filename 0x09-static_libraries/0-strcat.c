@@ -1,27 +1,29 @@
-#include <unistd.h>
+#include "main.h"
 /**
- * _strcat - writes the character c to stdout
- * @dest: The character to print
- * @src: The character to print
+ * _strcat - concatenates two strings
+ * @dest: input value
+ * @src: input value
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: void
  */
 char *_strcat(char *dest, char *src)
 {
-	int len;
-	char *s = dest;
+	int i;
+	int j;
 
-	len = sizeof(dest) - 1;
-	while (len--)
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		dest++;
+		i++;
 	}
-	while (*src != '\0')
+	j = 0;
+	while (src[j] != '\0')
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	return (s);
+
+	dest[i] = '\0';
+	return (dest);
 }

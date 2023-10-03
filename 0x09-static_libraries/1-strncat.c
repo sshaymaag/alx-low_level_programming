@@ -1,32 +1,30 @@
-#include <unistd.h>
-#include <string.h>
-
+#include "main.h"
 /**
- * _strncat - writes the character c to stdout
- * @dest: The character to print
- * @src: The character to print
- * @n: The character to print
- * Return: On success 1.
+ * _strncat - concatenate two strings
+ * using at most n bytes from src
+ * @dest: input value
+ * @src: input value
+ * @n: input value
+ *
+ * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int len;
-	char *s = dest;
+	int i;
+	int j;
 
-	len = sizeof(dest) - 1;
-	while (len--)
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		dest++;
+		i++;
 	}
-	while (n--)
+	j = 0;
+	while (j < n && src[j] != '\0')
 	{
-		if (*src == '\0')
-		{
-			break;
-		}
-		*dest = *src;
-		dest++;
-		src++;
+	dest[i] = src[j];
+	i++;
+	j++;
 	}
-	return (s);
+	dest[i] = '\0';
+	return (dest);
 }

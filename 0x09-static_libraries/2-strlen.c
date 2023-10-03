@@ -1,18 +1,18 @@
-#include <unistd.h>
-
+#include "main.h"
 /**
- * _strlen - length
- * @s: argument
- *Return: len
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: length
  */
 int _strlen(char *s)
 {
-	int len;
+	int longi = 0;
 
-	len = 0;
-	while (s[len])
+	while (*s != '\0')
 	{
-		len++;
+		longi++;
+		s++;
 	}
-	return (len);
+
+	return (longi);
 }

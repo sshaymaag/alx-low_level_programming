@@ -1,27 +1,27 @@
-#include <unistd.h>
-#include <string.h>
-#include <stdio.h>
-
-
+#include "main.h"
 /**
- * _strncpy - writes the character c to stdout
- * @dest: The character to print
- * @src: The character to print
- * @n: The character to print
- * Return: On success 1.
+ * _strncpy - copy a string
+ * @dest: input value
+ * @src: input value
+ * @n: input value
+ *
+ * Return: dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	int j;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	j = 0;
+	while (j < n && src[j] != '\0')
 	{
-		dest[i] = src[i];
+		dest[j] = src[j];
+		j++;
 	}
-	while (i < n)
+	while (j < n)
 	{
-		dest[i] = '\0';
-		i++;
+		dest[j] = '\0';
+		j++;
 	}
+
 	return (dest);
 }
