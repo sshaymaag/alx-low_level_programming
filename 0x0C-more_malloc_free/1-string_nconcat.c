@@ -42,8 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ptr[i] = s2[j];
 		i++;
 	}
-	while (n >= strlen(s2) && i < (strlen(s1) + strlen(s2)))
-		ptr[i++] = s2[j++];
-	
+
+	ptr[i] = '\0';
 	return (ptr);
 }
