@@ -12,6 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int number1, number2;
+	int *ptr;
 
 	if (argc != 3)
 	{
@@ -28,6 +29,9 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	printf("%d\n", number1 * number2);
+	ptr = malloc(sizeof(int) * sizeof(number1) + sizeof(int) * sizeof(number2));
+	*ptr = number1 * number2;
+
+	printf("%d\n", *ptr);
 	return (0);
 }
