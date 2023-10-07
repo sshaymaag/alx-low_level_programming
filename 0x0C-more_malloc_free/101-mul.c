@@ -23,14 +23,23 @@ int main(int argc, char *argv[])
 	len = strlen(argv[1]) + strlen(argv[2]) + 1;
 	ptr = malloc(sizeof(int) * len);
 
+	if (!ptr)
+	{
+		return (1);
+	}
+
+	printf("%d\n", len);
+
 	number1 = atoi(argv[1]);
 	number2 = atoi(argv[2]);
+	printf("%d%4d\n", number1, number2);
 
 	if (!number1 || !number2)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+
 
 	*ptr = number1 * number2;
 
