@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
 /**
@@ -11,7 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int number1, number2;
+	int number1, number2, len;
 	int *ptr;
 
 	if (argc != 3)
@@ -19,6 +20,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
+	len = strlen(argv[1]) + strlen(argv[2]) + 1;
+	ptr = malloc(sizeof(int) * len);
 
 	number1 = atoi(argv[1]);
 	number2 = atoi(argv[2]);
@@ -29,7 +32,6 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	ptr = malloc(sizeof(int) * sizeof(number1) + sizeof(int) * sizeof(number2));
 	*ptr = number1 * number2;
 
 	printf("%d\n", *ptr);
