@@ -42,25 +42,15 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-
-	len1 = strlen(s1);
-	len2 = strlen(s2);
-
-	len = len1 + len2 + 1;
-
+	len1 = strlen(s1), len2 = strlen(s2), len = len1 + len2 + 1;
 	ptr = malloc(sizeof(int) * len);
-
 	if (!ptr)
 		return (1);
-
 	for (i = 0; i <= len1 + len2; i++)
 		ptr[i] = 0;
-
 	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
-		digit1 = s1[len1] - '0';
-		carry = 0;
-
+		digit1 = s1[len1] - '0', carry = 0;
 		for (len2 = strlen(s2) - 1; len2 >= 0; len2--)
 		{
 			digit2 = s2[len2] - '0';
@@ -68,11 +58,9 @@ int main(int argc, char *argv[])
 			ptr[len1 + len2 + 1] = carry % 10;
 			carry /= 10;
 		}
-
 		if (carry > 0)
 			ptr[len1 + len2 + 1] += carry;
 	}
-
 	for (i = 0; i < len - 1; i++)
 	{
 		if (ptr[i])
@@ -80,10 +68,8 @@ int main(int argc, char *argv[])
 		if (a)
 			_putchar(ptr[i] + '0');
 	}
-
 	if (!a)
 		_putchar('0');
-
 	_putchar('\n');
 	free(ptr);
 	return (0);
