@@ -35,5 +35,6 @@ int main(int argc, char *argv[])
 	*ptr = number1 * number2;
 
 	printf("%d\n", *ptr);
+	free(ptr);
 	return (0);
 }
