@@ -5,6 +5,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+void beforeMain() __attribute__((constructor));
+void beforeMain() {
+    printMessage();
+}
+
 
 /**
  * struct list_s - singly linked list
